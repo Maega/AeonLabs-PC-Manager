@@ -1,0 +1,478 @@
+/* styles.css */
+
+.is-hidden {
+    display: none !important;
+}
+
+body {
+    color: #fff;
+    font-family: 'Segoe UI';
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+body.blur,
+#container.blur {
+    filter: blur(10px);
+    pointer-events: none;
+}
+
+.content::-webkit-scrollbar-thumb {
+    background-color: rgb(255 255 255 / 20%);
+    border-radius: 30px;
+    border: 6px solid transparent;
+    background-clip: content-box;
+    /* box-shadow: inset 2px 2px 5px 0 rgb(255 255 255 / 50%); */
+}
+
+.content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.content::-webkit-scrollbar {
+    /* width: 30px; */
+    width: 20px;
+}
+
+#titlebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 35px;
+    -webkit-app-region: drag;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+}
+
+#titlebar > * {
+    -webkit-app-region: no-drag;
+}
+
+#title {
+    padding-left: 15px;
+    display: flex;
+    align-items: center;
+}
+
+#controls .controlbtn {
+    margin: 0;
+	width: 40px;
+	height: 100%;
+	border: 0;
+	outline: 0;
+	background: transparent;
+}
+
+#controls .controlbtn:hover {
+    background: rgba(255,255,255,.1);
+}
+
+#controls .controlbtn.close:hover {
+	background: #e81123;
+}
+
+#controls .controlbtn svg {
+    width: 10px;
+    height: 10px;
+}
+
+#controls .controlbtn svg path, 
+#controls .controlbtn svg rect, 
+#controls .controlbtn svg polygon {
+	fill: #fff;
+}
+
+#container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: calc(100% - 35px);
+    width: 100%;
+    margin-top: 35px;
+}
+
+#sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100%;
+}
+
+#sidebar > .inner {
+    padding-left: 10px;
+    padding-top: 20px;
+}
+
+#sidebar > .inner > div {
+    padding: 8px;
+    padding-left: 12px;
+    margin: 5px 0;
+    border-radius: 5px;
+    width: calc(100% - 50px);
+    cursor: pointer;
+}
+
+#sidebar > .inner > div > i {
+    width: 25px;
+}
+
+#sidebar > .inner > div.selected,
+#sidebar > .inner > div:hover {
+    background: rgb(255 255 255 / 10%);
+    /* background: rgb(0 0 0 / 50%); */
+}
+
+#sidebar > .inner > div.selected:before,
+#sidebar > .inner > div:hover:before {
+    content: "";
+    height: 18px;
+    width: 4px;
+    background: rgb(4 101 179);
+    position: absolute;
+    border-radius: 5px;
+    left: 10px;
+}
+
+#main {
+    position: absolute;
+    top: 0;
+    left: 300px;
+    width: calc(100% - 300px);
+    height: 100%;
+    /* padding: 20px; */
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.content {
+    padding: 20px;
+    height: calc(100% - 40px);
+    display: none;
+}
+
+.content.selected {
+    display: block;
+    overflow-y: auto;
+}
+
+/* Buttons */
+.button {
+    appearance: button;
+    backface-visibility: hidden;
+    background-color: #405cf5;
+    border-radius: 6px;
+    border-width: 0;
+    box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    font-family: -apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Ubuntu,sans-serif;
+    font-size: 100%;
+    height: 40px;
+    line-height: 1.15;
+    outline: none;
+    overflow: hidden;
+    padding: 0 25px;
+    position: relative;
+    text-align: center;
+    text-transform: none;
+    transform: translateZ(0);
+    transition: all .2s,box-shadow .08s ease-in;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.button:hover {
+    background-color: #5973ff;
+}
+
+.button:disabled {
+    cursor: default;
+}
+
+/* Install Software Page - Summary */
+#installSummary {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #282828;
+    display: flex;
+    align-items: center;
+    transition: transform 0.5s;
+    transform: translateY(70px);
+}
+#installSummary.is-visible {
+    transform: translateY(0);
+}
+#installSummary > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 20px;
+}
+#installSummary > div > span {
+    font-size: 1.05em;
+}
+
+/* Content - Option Square */
+.grid-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.grid-options > .item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background: rgb(255 255 255 / 10%);
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    margin: 5px;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.grid-options > .item > i {
+    opacity: 0.6;
+    transition: opacity 0.2s;
+}
+.grid-options > .item:hover > i {
+    opacity: 1;
+}
+.grid-options > .item .title {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+.grid-options > .item .subtitle {
+    font-size: 0.9em;
+    opacity: 0.8;
+    margin-top: 3px;
+}
+
+/* Content - Options */
+.option {
+    width: calc(100% - 40px);
+    max-width: 900px;
+    /* background: rgba(38, 43, 59, 0.8); */
+    background: rgb(255 255 255 / 10%);
+    margin: 15px 0;
+    border-radius: 5px;
+    padding: 20px;
+    cursor: pointer;
+}
+.option:not(.is-info):hover {
+    background: rgb(255 255 255 / 15%);
+    /* box-shadow: rgb(2 2 2 / 46%) 0px 0px 10px 5px;
+    transform: scale(1.005);
+    transition: all 0.25s; */
+}
+.option.is-info {
+    cursor: default;
+}
+.option > i {
+    width: 25px;
+}
+.option.is-check,
+.option.is-info {
+    display: flex;
+    justify-content: space-between;
+}
+.option.is-check > div,
+.option.is-info > div {
+    display: flex;
+    align-items: center;
+}
+.option.is-check > div > i,
+.option.is-check > div > img {
+    width: 32px;
+    text-align: center;
+    margin-right: 15px;
+    filter: grayscale(1) brightness(100);
+}
+.option.is-info > div > i {
+    width: 40px;
+    text-align: center;
+    margin-right: 15px;
+}
+.option.is-check > div .title,
+.option.is-info > div .title {
+    font-weight: bold;
+}
+.option.is-check > div .subtitle,
+.option.is-info > div .subtitle {
+    font-size: 0.9em;
+}
+.option.is-check:after {
+    float: right;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 400;
+    font-size: 1.3em;
+    content: "\f0c8";
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.option.is-check.selected:after {
+    font-weight: 900;
+    content: "\f14a";
+}
+.option.is-check.is-installed,
+.option.is-check.is-conflict {
+    pointer-events: none;
+    filter: brightness(0.5);
+}
+.option.is-check.is-installed:after,
+.option.is-check.is-conflict:after {
+    font-family: "Segoe UI";
+    font-size: 1em;
+    content: "Installed";
+}
+.option.is-check.is-conflict:after {
+    content: "Cannot Install";
+    filter: brightness(1.5);
+}
+.option.is-subpage:after {
+    float: right;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f054";
+}
+.option.is-link:after {
+    float: right;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f35d"
+}
+
+/* Controls - Toggle Switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 46px;
+    height: 20px;
+}
+.switch > input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.switch > input:checked + .slider {
+    background-color: #0078d7;
+    border: 1px solid transparent;
+}
+.switch > input:checked + .slider:before {
+    transform: translateX(26px);
+    background-color: white;
+}
+.switch > input:focus + .slider {
+    box-shadow: 0 0 1px #0078d7
+}
+.switch > .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: transparent;
+    border: 1px solid currentColor;
+    transition: .1s;
+    border-radius: 34px;
+}
+.switch > .slider:before {
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    left: 3px;
+    bottom: 3px;
+    background-color: currentColor;
+    transition: .1s;
+    border-radius: 50%;
+}
+
+/* Controls - Radio */
+input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+input[type="radio"] + label {
+    display: block;
+    padding: 10px 0;
+    opacity: 0.8;
+    transition: 0.1s;
+}
+input[type="radio"] + label:hover {
+    opacity: 1;
+}
+input[type="radio"] + label:before {
+    content: "";
+    display: inline-block;
+    width: 1.2em;
+    height: 1.2em;
+    border: 2px solid currentColor;
+    border-radius: 50%;
+    vertical-align: -0.2em;
+    margin-right: 0.25em;
+    padding: 0.2em;
+    box-sizing: border-box;
+    background-clip: content-box;
+}
+input[type="radio"]:checked + label:before {
+    background-color: currentColor;
+    border-color: #0078d7;
+}
+
+/* Controls - Checkbox */
+input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+input[type="checkbox"] + label {
+    display: block;
+    padding: 10px 0;
+    opacity: 0.8;
+    transition: 0.1s;
+}
+input[type="checkbox"] + label:hover {
+    opacity: 1;
+}
+input[type="checkbox"] + label:before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 400;
+    content: "\f0c8";
+    display: inline-block;
+    font-size: 1.2em;
+    /* width: 1.2em;
+    height: 1.2em; */
+    margin-right: 0.4em;
+    vertical-align: -0.1em;
+    /* padding: 0.2em; */
+    box-sizing: border-box;
+    background-clip: content-box;
+}
+input[type="checkbox"]:checked + label:before {
+    font-weight: 900;
+    content: "\f14a";
+}
+
+/* SweetAlert */
+.swal2-popup {
+    background: #171717 !important;
+    color: #cdcdcd !important;
+    border: 1px solid rgb(171 171 171 / 25%) !important;
+}
+/* .swal2-footer {
+    display: none !important;
+} */
+.swal2-shown #container {
+    filter: blur(10px);
+}

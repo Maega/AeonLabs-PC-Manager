@@ -1,0 +1,101 @@
+[
+    {
+        "id": "steam",
+        "name": "Steam",
+        "subtitle": "The world's most popular PC game launcher and marketplace",
+        "img": "icons/steam.png",
+        "glyph": "fab fa-steam fa-2x",
+        "installCmd": "winget install -e --id Valve.Steam",
+        "checkPaths": ["C:\\Program Files (x86)\\Steam\\steam.exe"]
+    },
+    {
+        "id": "epic",
+        "name": "Epic Games Launcher",
+        "subtitle": "A popular PC game launcher and marketplace from Epic Games",
+        "img": "icons/epicgameslauncher.png",
+        "installCmd": "winget install -e --id EpicGames.EpicGamesLauncher",
+        "checkPaths": ["C:\\Program Files (x86)\\Epic Games\\Launcher\\Engine\\Binaries\\Win64\\EpicGamesLauncher.exe"]
+    },
+    {
+        "id": "origin",
+        "name": "EA App",
+        "subtitle": "A popular PC game launcher and marketplace from EA Games",
+        "img": "icons/origin.png",
+        "installCmd": "winget install -e --id ElectronicArts.EADesktop"
+    },
+    {
+        "id": "gog",
+        "name": "GOG Galaxy",
+        "subtitle": "An awesome DRM-free PC game launcher. Even imports games from <em>other</em> launchers!",
+        "img": "icons/gog.png",
+        "installCmd": "winget install -e --id GOG.Galaxy"
+    },
+    {
+        "id": "aurasync",
+        "name": "ASUS Aura Sync",
+        "subtitle": "Customise your ASUS motherboard lighting with Aura Sync",
+        "img": "icons/aurasync.png",
+        "glyph": "fa fa-lightbulb fa-2x",
+        "installCmd": "software\\AuraSync\\AuraSetup.exe -s",
+        "checkPaths": ["C:\\Program Files (x86)\\ASUS\\AURA\\Aura.exe"],
+        "conflictPaths": ["C:\\Program Files (x86)\\ASUS\\Unknown\\REPLACEME.exe"],
+        "conflictsWith": ["ASUS Armory Crate"]
+    },
+    {
+        "id": "vlc",
+        "name": "VLC Media Player",
+        "subtitle": "A popular open source media player that plays almost anything",
+        "img": "icons/vlc.png",
+        "installCmd": "winget install -e --id VideoLAN.VLC",
+        "checkPaths": ["C:\\Program Files\\VideoLAN\\VLC\\vlc.exe"]
+    },
+    {
+        "id": "chrome",
+        "name": "Google Chrome",
+        "subtitle": "It's Chrome, need we say more?",
+        "img": "icons/chrome.png",
+        "installCmd": "winget install -e --id Google.Chrome",
+        "checkPaths": ["C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"]
+    },
+    {
+        "id": "firefox",
+        "name": "Mozilla Firefox",
+        "subtitle": "A popular open-source web browser",
+        "img": "icons/firefox.png",
+        "installCmd": "winget install -e --id Mozilla.Firefox",
+        "checkPaths": ["C:\\Program Files\\Mozilla Firefox\\firefox.exe"]
+    },
+    {
+        "id": "obs",
+        "name": "OBS Studio",
+        "subtitle": "An open-source screencasting and streaming app that's popular with Twitch streamers",
+        "img": "icons/obs.png",
+        "installCmd": "winget install -e --id OBSProject.OBSStudio",
+        "checkPaths": ["C:\\Program Files\\obs-studio\\bin\\64bit\\obs64.exe"]
+    },
+    {
+        "id": "githubdesktop",
+        "name": "GitHub Desktop",
+        "subtitle": "A popular development tool used for version control",
+        "img": "icons/githubdesktop.png",
+        "glyph": "fab fa-github fa-2x",
+        "installCmd": "winget install -e --id GitHub.GitHubDesktop",
+        "checkPaths": ["%%userdir%%\\AppData\\Local\\GitHubDesktop\\GitHubDesktop.exe"]
+    },
+    {
+        "id": "rainmeter",
+        "name": "Rainmeter",
+        "subtitle": "Allows you to display customizable skins and widgets on your desktop",
+        "img": "icons/rainmeter.png",
+        "installCmd": "winget install -e --id Rainmeter.Rainmeter"
+    },
+    {
+        "id": "spotify",
+        "name": "Spotify",
+        "subtitle": "A digital music service that gives you access to millions of songs",
+        "img": "icons/spotify.png",
+        "glyph": "fab fa-spotify fa-2x",
+        "installCmd": "winget install -e --id Spotify.Spotify",
+        "checkPaths": ["%%userdir%%\\AppData\\Roaming\\Spotify\\Spotify.exe"]
+    }
+]

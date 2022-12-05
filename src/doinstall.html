@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                background-color: #171717;
+                text-align: center;
+                color: #fff;
+                font-family: 'Segoe UI';
+            }
+            body > div {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            h1 {
+                margin-bottom: 0;
+            }
+            h2 {
+                margin-top: 10px;
+            }
+
+            progress {
+                height: 40px;
+                width: 300px;
+                display: none;
+            }
+
+            .loader {
+                width: 48px;
+                height: 48px;
+                border-radius: 50%;
+                display: inline-block;
+                border-top: 3px solid #FFF;
+                border-right: 3px solid transparent;
+                box-sizing: border-box;
+                animation: rotation 1s linear infinite;
+            }
+
+            @keyframes rotation {
+                0% {
+                    transform: rotate(0deg);
+                }
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <img id="currentImg" src="#">
+            <h1>Now Installing</h1>
+            <h2 id="currentStage">Please Wait...</h2>
+            <br><br>
+            <span class="loader"></span>
+            <!-- <br> -->
+            <progress id="progress" value="0" max="1"></progress>
+        </div>
+
+        <!-- Import Renderer Process -->
+        <script src="./doinstallRenderer.js"></script>
+    </body>
+</html>
