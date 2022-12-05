@@ -15,9 +15,10 @@ module.exports = {
             name: '@electron-forge/publisher-github',
             config: {
                 repository: {
-                    owner: 'AeonLabs',
+                    owner: 'Maega',
                     name: 'aeonlabs-pc-manager'
                 },
+                draft: false,
                 prerelease: true
             }
         }

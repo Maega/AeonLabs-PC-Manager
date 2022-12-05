@@ -2,6 +2,7 @@
 const {app, ipcMain} = require('electron');
 
 if (require('electron-squirrel-startup')) app.quit();
+require('update-electron-app')();
 
 const {BrowserWindow} = require("electron-acrylic-window");
 const remote = require('@electron/remote/main');

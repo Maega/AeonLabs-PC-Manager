@@ -1,7 +1,7 @@
 {
   "name": "aeonlabs-pc-manager",
   "productName": "AeonLabs PC Manager",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "AeonLabs PC Companion App",
   "main": "src/main.js",
   "scripts": {
@@ -11,6 +11,10 @@
     "publish": "electron-forge publish",
     "lint": "echo \"No linting configured\""
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maega/aeonlabs-pc-manager.git"
+  },
   "keywords": [],
   "author": {
     "name": "AeonLabs",
@@ -18,15 +22,17 @@
   },
   "license": "MIT",
   "dependencies": {
-    "electron-squirrel-startup": "^1.0.0",
-
+    "@electron-forge/publisher-github": "^6.0.4",
     "@electron/remote": "^2.0.1",
+    "dotenv": "^16.0.3",
     "electron-acrylic-window": "^0.5.9",
+    "electron-squirrel-startup": "^1.0.0",
     "fs-extra": "^10.0.0",
     "jquery": "^3.6.0",
     "node-cmd": "^5.0.0",
     "sweetalert2": "^11.3.0",
-    "systeminformation": "^5.9.16"
+    "systeminformation": "^5.9.16",
+    "update-electron-app": "^2.0.1"
   },
   "devDependencies": {
     "@electron-forge/cli": "^6.0.4",
