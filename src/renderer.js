@@ -33,7 +33,8 @@ function loadPage(target) {
     $(`#main > .content[data-page="${target}"]`).attr('style', '');
 
     // If requested page is 'sysinfo', call loadSysInfo to start fetching hardware info
-    if (target === 'sysinfo') loadSysInfo();
+    // ! System info is now loaded on launch
+    //if (target === 'sysinfo') loadSysInfo();
 
     // If requested page is 'install', call loadInstallOpts to check already-installed or conflicting software
     if (target === 'install') loadInstallOpts();
@@ -201,3 +202,6 @@ function aboutApp() {
 
 // Asynchronous sleep function
 const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+
+// Start loading system info immediately on launch
+loadSysInfo();
