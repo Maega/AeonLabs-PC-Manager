@@ -80,6 +80,14 @@ ipcMain.on('startInstall', async (event, installList) => {
         }
     });
 
+    // Set install window position to position of mainWindow
+    let mainWindowSize = mainWindow.getSize();
+    let installWindowSize = installWindow.getSize();
+    let mainWindowPos = mainWindow.getPosition();
+    const newPosX = mainWindowPos[0] + ((mainWindowSize[0] / 2) - (installWindowSize[0] / 2));
+    const newPosY = mainWindowPos[1] + ((mainWindowSize[1] / 2) - (installWindowSize[1] / 2));
+    installWindow.setPosition(newPosX, newPosY);
+
     const softwareDict = require('./software.json');
 
     const doInstall = (installCmd) => {
