@@ -14,21 +14,26 @@
         "subtitle": "A popular PC game launcher and marketplace from Epic Games",
         "img": "icons/epicgameslauncher.png",
         "installCmd": "winget install -e --id EpicGames.EpicGamesLauncher",
-        "checkPaths": ["C:\\Program Files (x86)\\Epic Games\\Launcher\\Engine\\Binaries\\Win64\\EpicGamesLauncher.exe"]
+        "checkPaths": [
+            "C:\\Program Files (x86)\\Epic Games\\Launcher\\Engine\\Binaries\\Win64\\EpicGamesLauncher.exe",
+            "C:\\Program Files (x86)\\Epic Games\\Launcher\\Portal\\Binaries\\Win32\\EpicGamesLauncher.exe"
+        ]
     },
     {
         "id": "origin",
         "name": "EA App",
         "subtitle": "A popular PC game launcher and marketplace from EA Games",
         "img": "icons/origin.png",
-        "installCmd": "winget install -e --id ElectronicArts.EADesktop"
+        "installCmd": "winget install -e --id ElectronicArts.EADesktop",
+        "checkPaths": ["C:\\Program Files\\Electronic Arts\\EA Desktop\\EA Desktop\\EALauncher.exe"]
     },
     {
         "id": "gog",
         "name": "GOG Galaxy",
         "subtitle": "An awesome DRM-free PC game launcher. Even imports games from <em>other</em> launchers!",
         "img": "icons/gog.png",
-        "installCmd": "winget install -e --id GOG.Galaxy"
+        "installCmd": "winget install -e --id GOG.Galaxy",
+        "checkPaths": ["C:\\Program Files (x86)\\GOG Galaxy\\GalaxyClient.exe"]
     },
     {
         "id": "aurasync",
