@@ -48,7 +48,7 @@
         "name": "Zoom",
         "subtitle": "Team Chat, Phone, Video & More",
         "img": "icons/zoom.png",
-        "glyph": "fa fa-phone-alt fa-2x",
+        "glyph": "fa fa-microphone-alt fa-2x",
         "installCmd": "winget install -e --id Zoom.Zoom",
         "checkPaths": ["%%userdir%%\\AppData\\Roaming\\Zoom\\bin\\Zoom.exe"]
     },
@@ -125,5 +125,21 @@
         "glyph": "fab fa-spotify fa-2x",
         "installCmd": "winget install -e --id Spotify.Spotify",
         "checkPaths": ["%%userdir%%\\AppData\\Roaming\\Spotify\\Spotify.exe"]
+    },
+    {
+        "id": "icue",
+        "name": "Corsair iCUE",
+        "subtitle": "Extensive PC monitoring and RGB lighting control software from Corsair",
+        "img": "icons/icue.png",
+        "installCmd": "winget install -e --id Corsair.iCUE.4",
+        "checkPaths": ["C:\\Program Files\\Corsair\\CORSAIR iCUE 4 Software\\iCUE.exe"]
+    },
+    {
+        "id": "logitechghub",
+        "name": "Logitech G HUB",
+        "subtitle": "Software to control the lighting, profiles and settings of your Logitech G-series hardware",
+        "img": "icons/logitechghub.png",
+        "installCmd": "winget install -e --id Logitech.GHUB",
+        "checkPaths": ["C:\\Program Files\\LGHUB\\lghub.exe"]
     }
 ]
