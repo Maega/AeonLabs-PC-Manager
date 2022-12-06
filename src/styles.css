@@ -134,7 +134,8 @@ body.blur,
 #sidebar > .inner > div.selected:before,
 #sidebar > .inner > div:hover:before {
     content: "";
-    height: 18px;
+    /* height: 18px; */
+    height: 20px;
     width: 4px;
     background: rgb(4 101 179);
     position: absolute;
