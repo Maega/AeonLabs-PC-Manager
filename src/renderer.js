@@ -168,7 +168,7 @@ async function startInstall() {
     $('[data-page="install"] .option.is-check.selected').each((index, elem) => installList.push($(elem).data('value')));
 
     // Add the 'blur' class to main app window to disable pointer events & blur the window
-    $('body').addClass('blur');
+    $('#container').addClass('blur');
 
     // Sleep for 250ms to prevent race condition and allow the DOM to update
     await sleep(250);
@@ -180,7 +180,7 @@ async function startInstall() {
     loadPage('install');
 
     // Remove the 'blur' class from main app window
-    $('body').removeClass('blur');
+    $('#container').removeClass('blur');
 
     // If errors were encountered during installation, notify the user
     if (errors.length) Swal.fire({
