@@ -114,7 +114,8 @@
         "name": "Rainmeter",
         "subtitle": "Allows you to display customizable skins and widgets on your desktop",
         "img": "icons/rainmeter.png",
-        "installCmd": "winget install -e --id Rainmeter.Rainmeter"
+        "installCmd": "winget install -e --id Rainmeter.Rainmeter",
+        "checkPaths": ["C:\\Program Files\\Rainmeter\\Rainmeter.exe"]
     },
     {
         "id": "spotify",
