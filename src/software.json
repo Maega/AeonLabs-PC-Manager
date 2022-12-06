@@ -36,15 +36,21 @@
         "checkPaths": ["C:\\Program Files (x86)\\GOG Galaxy\\GalaxyClient.exe"]
     },
     {
-        "id": "aurasync",
-        "name": "ASUS Aura Sync",
-        "subtitle": "Customise your ASUS motherboard lighting with Aura Sync",
-        "img": "icons/aurasync.png",
-        "glyph": "fa fa-lightbulb fa-2x",
-        "installCmd": "software\\AuraSync\\AuraSetup.exe -s",
-        "checkPaths": ["C:\\Program Files (x86)\\ASUS\\AURA\\Aura.exe"],
-        "conflictPaths": ["C:\\Program Files (x86)\\ASUS\\Unknown\\REPLACEME.exe"],
-        "conflictsWith": ["ASUS Armory Crate"]
+        "id": "discord",
+        "name": "Discord",
+        "subtitle": "The easiest way to talk over voice, video, and text",
+        "img": "icons/discord.png",
+        "installCmd": "winget install -e --id Discord.Discord",
+        "checkPaths": ["%%userdir%%\\AppData\\Local\\Discord\\Update.exe"]
+    },
+    {
+        "id": "zoom",
+        "name": "Zoom",
+        "subtitle": "Team Chat, Phone, Video & More",
+        "img": "icons/zoom.png",
+        "glyph": "fa fa-phone-alt fa-2x",
+        "installCmd": "winget install -e --id Zoom.Zoom",
+        "checkPaths": ["%%userdir%%\\AppData\\Roaming\\Zoom\\bin\\Zoom.exe"]
     },
     {
         "id": "vlc",
@@ -71,12 +77,28 @@
         "checkPaths": ["C:\\Program Files\\Mozilla Firefox\\firefox.exe"]
     },
     {
+        "id": "brave",
+        "name": "Brave Browser",
+        "subtitle": "A popular, privacy focused web browser",
+        "img": "icons/brave.png",
+        "installCmd": "winget install -e --id BraveSoftware.BraveBrowser",
+        "checkPaths": ["C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe"]
+    },
+    {
         "id": "obs",
         "name": "OBS Studio",
         "subtitle": "An open-source screencasting and streaming app that's popular with Twitch streamers",
         "img": "icons/obs.png",
         "installCmd": "winget install -e --id OBSProject.OBSStudio",
         "checkPaths": ["C:\\Program Files\\obs-studio\\bin\\64bit\\obs64.exe"]
+    },
+    {
+        "id": "vscode",
+        "name": "Visual Studio Code",
+        "subtitle": "A popular code editor optimized for building and debugging modern web and cloud applications",
+        "img": "icons/vscode.png",
+        "installCmd": "winget install -e --id Microsoft.VisualStudioCode",
+        "checkPaths": ["%%userdir%%\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe"]
     },
     {
         "id": "githubdesktop",
