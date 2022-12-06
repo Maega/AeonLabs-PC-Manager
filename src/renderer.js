@@ -5,6 +5,7 @@ const fs = require('fs-extra');
 const $ = require('jquery');
 const Swal = require('sweetalert2');
 const softwareDict = require('./software.json');
+const packageMeta = require('../package.json');
 const os = require('os');
 
 // Page Change Listener & Function
@@ -195,7 +196,7 @@ async function startInstall() {
 function aboutApp() {
     Swal.fire({
         //iconHtml: '<img src="icons/aeonlabs_brand.png">',
-        title: '<img src="icons/aeonlabs_brand.png" width="128" style="margin:20px 0"><br>AeonLabs PC Manager',
+        title: '<img src="icons/aeonlabs_brand.png" width="128" style="margin:20px 0"><br>AeonLabs PC Manager v' + packageMeta.version,
         text: `PC Manager is a tool for AeonLabs branded PCs that allows you to quickly install popular software, book a service and view information about your machine.`
     })
 }
