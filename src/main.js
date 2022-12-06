@@ -1,5 +1,6 @@
 // Modules to control application life and create native browser window
 const {app, ipcMain} = require('electron');
+const cmd = require('node-cmd');
 
 if (require('electron-squirrel-startup')) app.quit();
 require('update-electron-app')();
@@ -56,7 +57,6 @@ app.on('window-all-closed', () => app.quit());
 // IPC Events
 ipcMain.on('startInstall', async (event, installList) => {
 
-    const cmd = require('node-cmd');
     console.log(installList);
     
     // Define the browser window.
@@ -128,4 +128,8 @@ ipcMain.on('startInstall', async (event, installList) => {
 
     event.returnValue = errors;
 
+});
+
+ipcMain.on('runCmd', async (event, command) => {
+    cmd.run(command);
 });
