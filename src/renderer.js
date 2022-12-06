@@ -53,7 +53,7 @@ $(document).on('click', '[data-page="install"] .option.is-check', checkSelectedA
 function checkSelectedApps() {
     const selectedLength = $('[data-page="install"] .option.is-check.selected').length;
     $('#installSummary > div > span').text(`Ready to install ${selectedLength} apps`);
-    selectedLength ? $('#installSummary').addClass('is-visible') : $('#installSummary').removeClass('is-visible');
+    selectedLength ? $('#main').addClass('is-summary-visible') : $('#main').removeClass('is-summary-visible');
 }
 
 // 'sysinfo' page load function

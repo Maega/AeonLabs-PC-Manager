@@ -151,6 +151,7 @@ body.blur,
     height: 100%;
     /* padding: 20px; */
     background: rgba(0, 0, 0, 0.4);
+    transition: height 0.3s;
 }
 
 .content {
@@ -209,11 +210,12 @@ body.blur,
     background-color: #282828;
     display: flex;
     align-items: center;
-    transition: transform 0.5s;
+    /* transition: transform 0.5s; */
     transform: translateY(70px);
 }
-#installSummary.is-visible {
-    transform: translateY(0);
+#main.is-summary-visible {
+    /* transform: translateY(0); */
+    height: calc(100% - 70px);
 }
 #installSummary > div {
     display: flex;
