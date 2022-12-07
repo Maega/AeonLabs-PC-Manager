@@ -36,6 +36,15 @@
         "checkPaths": ["C:\\Program Files (x86)\\GOG Galaxy\\GalaxyClient.exe"]
     },
     {
+        "id": "psremoteplay",
+        "name": "PS Remote Play",
+        "subtitle": "Stream your PlayStation games from your console to your PC. Yep, it can do that!",
+        "img": "icons/psremoteplay.png",
+        "glyph": "fab fa-playstation fa-2x",
+        "installCmd": "winget install -e --id PlayStation.PSRemotePlay",
+        "checkPaths": ["C:\\Program Files (x86)\\Sony\\PS Remote Play\\RemotePlay.exe"]
+    },
+    {
         "id": "discord",
         "name": "Discord",
         "subtitle": "The easiest way to talk over voice, video, and text",
