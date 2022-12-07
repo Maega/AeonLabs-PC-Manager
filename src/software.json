@@ -102,23 +102,6 @@
         "checkPaths": ["C:\\Program Files\\obs-studio\\bin\\64bit\\obs64.exe"]
     },
     {
-        "id": "vscode",
-        "name": "Visual Studio Code",
-        "subtitle": "A popular code editor optimized for building and debugging modern web and cloud applications",
-        "img": "icons/vscode.png",
-        "installCmd": "winget install -e --id Microsoft.VisualStudioCode",
-        "checkPaths": ["%%userdir%%\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe"]
-    },
-    {
-        "id": "githubdesktop",
-        "name": "GitHub Desktop",
-        "subtitle": "A popular development tool used for version control",
-        "img": "icons/githubdesktop.png",
-        "glyph": "fab fa-github fa-2x",
-        "installCmd": "winget install -e --id GitHub.GitHubDesktop",
-        "checkPaths": ["%%userdir%%\\AppData\\Local\\GitHubDesktop\\GitHubDesktop.exe"]
-    },
-    {
         "id": "rainmeter",
         "name": "Rainmeter",
         "subtitle": "Allows you to display customizable skins and widgets on your desktop",
@@ -153,6 +136,14 @@
         "checkPaths": ["C:\\Program Files\\LGHUB\\lghub.exe"]
     },
     {
+        "id": "elgatocc",
+        "name": "Elgato Control Center",
+        "subtitle": "Control your Elgato lights with ease",
+        "img": "icons/elgato.png",
+        "installCmd": "winget install -e --id Elgato.ControlCenter",
+        "checkPaths": ["C:\\Program Files\\Elgato\\ControlCenter\\ControlCenter.exe"]
+    },
+    {
         "id": "authy",
         "name": "Authy Desktop",
         "subtitle": "Get two-factor login codes on your PC with the desktop version of Authy",
@@ -160,5 +151,31 @@
         "installCmd": "winget install -e --id Twilio.Authy",
         "checkPaths": ["C:\\Program Files\\PLACEHOLDER\\PLACEHOLDER.exe"],
         "hidden": true
+    },
+    {
+        "id": "vscode",
+        "name": "Visual Studio Code",
+        "subtitle": "A popular code editor optimized for building and debugging modern web and cloud applications",
+        "img": "icons/vscode.png",
+        "installCmd": "winget install -e --id Microsoft.VisualStudioCode",
+        "checkPaths": ["%%userdir%%\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe"]
+    },
+    {
+        "id": "githubdesktop",
+        "name": "GitHub Desktop",
+        "subtitle": "A popular development tool used for version control",
+        "img": "icons/githubdesktop.png",
+        "glyph": "fab fa-github fa-2x",
+        "installCmd": "winget install -e --id GitHub.GitHubDesktop",
+        "checkPaths": ["%%userdir%%\\AppData\\Local\\GitHubDesktop\\GitHubDesktop.exe"]
+    },
+    {
+        "id": "postman",
+        "name": "Postman",
+        "subtitle": "A popular collaboration platform for API development",
+        "img": "icons/postman.png",
+        "glyph": "fas fa-code-branch fa-2x",
+        "installCmd": "winget install -e --id Postman.Postman",
+        "checkPaths": ["%%userdir%%\\AppData\\Local\\Postman\\Postman.exe"]
     }
 ]
