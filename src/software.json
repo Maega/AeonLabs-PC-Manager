@@ -195,5 +195,40 @@
         "glyph": "fas fa-code-branch fa-2x",
         "installCmd": "winget install -e --id Postman.Postman",
         "checkPaths": ["%%userdir%%\\AppData\\Local\\Postman\\Postman.exe"]
+    },
+    {
+        "id": "7zip",
+        "name": "7-Zip",
+        "subtitle": "A free, open-source file archiver to open and unpack 7z, RAR, ZIP and other files",
+        "img": "icons/7zip.png",
+        "glyph": "fas fa-file-archive fa-2x",
+        "installCmd": "winget install -e --id 7zip.7zip",
+        "checkPaths": ["C:\\Program Files\\7-Zip\\7zFM.exe"]
+    },
+    {
+        "id": "gdrive",
+        "name": "Google Drive",
+        "subtitle": "A popular cloud storage and synchronization app",
+        "img": "icons/gdrive.png",
+        "glyph": "fab fa-google-drive fa-2x",
+        "installCmd": "winget install -e --id Google.Drive",
+        "checkPaths": ["C:\\Program Files\\Google\\Drive File Stream\\launch.bat"]
+    },
+    {
+        "id": "onedrive",
+        "name": "Microsoft OneDrive",
+        "subtitle": "A popular cloud storage and synchronization app",
+        "img": "icons/onedrive.png",
+        "installCmd": "winget install -e --id Microsoft.OneDrive",
+        "checkPaths": ["C:\\Program Files\\PLACEHOLDER\\PLACEHOLDER.exe"],
+        "hidden": true
+    },
+    {
+        "id": "treesize",
+        "name": "TreeSize Free",
+        "subtitle": "An app to figure out where all your precious disk space has gone",
+        "img": "icons/treesize.png",
+        "installCmd": "winget install -e --id JAMSoftware.TreeSize.Free",
+        "checkPaths": ["C:\\Program Files\\JAM Software\\TreeSize Free\\TreeSizeFree.exe"]
     }
 ]
