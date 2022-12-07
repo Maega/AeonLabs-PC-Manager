@@ -121,6 +121,8 @@ async function loadInstallOpts() {
 
     $('[data-page="install"] .options').empty();
     softwareDict.forEach(app => {
+
+        if (app.hidden) return;
         
         let alreadyInstalled = false;
         let hasConflict = false;

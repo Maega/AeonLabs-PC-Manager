@@ -141,7 +141,8 @@
         "subtitle": "Extensive PC monitoring and RGB lighting control software from Corsair",
         "img": "icons/icue.png",
         "installCmd": "winget install -e --id Corsair.iCUE.4",
-        "checkPaths": ["C:\\Program Files\\Corsair\\CORSAIR iCUE 4 Software\\iCUE.exe"]
+        "checkPaths": ["C:\\Program Files\\Corsair\\CORSAIR iCUE 4 Software\\iCUE.exe"],
+        "hidden": true
     },
     {
         "id": "logitechghub",
@@ -150,5 +151,14 @@
         "img": "icons/logitechghub.png",
         "installCmd": "winget install -e --id Logitech.GHUB",
         "checkPaths": ["C:\\Program Files\\LGHUB\\lghub.exe"]
+    },
+    {
+        "id": "authy",
+        "name": "Authy Desktop",
+        "subtitle": "Get two-factor login codes on your PC with the desktop version of Authy",
+        "img": "icons/authy.png",
+        "installCmd": "winget install -e --id Twilio.Authy",
+        "checkPaths": ["C:\\Program Files\\PLACEHOLDER\\PLACEHOLDER.exe"],
+        "hidden": true
     }
 ]
