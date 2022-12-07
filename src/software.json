@@ -125,7 +125,7 @@
         "img": "icons/icue.png",
         "installCmd": "winget install -e --id Corsair.iCUE.4",
         "checkPaths": ["C:\\Program Files\\Corsair\\CORSAIR iCUE 4 Software\\iCUE.exe"],
-        "hidden": true
+        "asAdmin": true
     },
     {
         "id": "logitechghub",
@@ -167,6 +167,7 @@
         "img": "icons/lastpass.png",
         "installCmd": "winget install -e --id LogMeIn.LastPass",
         "checkPaths": ["C:\\Program Files\\PLACEHOLDER\\PLACEHOLDER.exe"],
+        "asAdmin": true,
         "hidden": true
     },
     {
