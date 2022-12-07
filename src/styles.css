@@ -34,6 +34,11 @@ body.blur,
     width: 20px;
 }
 
+.container {
+    max-width: 940px;
+    margin: auto;
+}
+
 #titlebar {
     position: fixed;
     top: 0;

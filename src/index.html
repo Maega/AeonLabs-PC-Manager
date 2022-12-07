@@ -41,208 +41,214 @@
         <div id="main">
 
             <div class="content selected" data-page="welcome">
-                <h2 style="margin-top: 5px">Setup <i class="fa fa-chevron-right" style="font-size: 0.7em; vertical-align: middle"></i> Welcome</h2>
-                <div style="text-align: center;margin-top:30px;margin-bottom:30px;">
-                    <h2 style="margin-bottom:0">Welcome to AeonLabs PC Manager</h2>
-                    <div style="font-size: 1.2em;">Choose an option below to get started</div>
+                <div class="container">
+                    <h2 style="margin-top: 5px">Setup <i class="fa fa-chevron-right" style="font-size: 0.7em; vertical-align: middle"></i> Welcome</h2>
+                    <div style="text-align: center;margin-top:30px;margin-bottom:30px;">
+                        <h2 style="margin-bottom:0">Welcome to AeonLabs PC Manager</h2>
+                        <div style="font-size: 1.2em;">Choose an option below to get started</div>
+                    </div>
+    
+                    <div class="grid-options">
+    
+                        <div class="item" data-target="install">
+                            <i class="fa fa-download fa-4x"></i>
+                            <div>
+                                <div class="title">Install Software</div>
+                                <div class="subtitle">One-click installation of popular apps</div>
+                            </div>
+                        </div>
+                        
+                        <div class="item" data-target="sysinfo">
+                            <i class="fa fa-microchip fa-4x"></i>
+                            <div>
+                                <div class="title">System Information</div>
+                                <div class="subtitle">Check out your AeonLabs system specs from here</div>
+                            </div>
+                        </div>
+    
+                        <div class="item is-disabled" data-target="service">
+                            <i class="fa fa-tools fa-4x"></i>
+                            <div>
+                                <div class="title">Service & Support</div>
+                                <div class="subtitle">Get help or book a service for your AeonLabs PC</div>
+                            </div>
+                        </div>
+    
+                        <div class="item is-disabled" data-target="buy">
+                            <i class="fa fa-plus fa-4x"></i>
+                            <div>
+                                <div class="title">Get Accessories</div>
+                                <div class="subtitle">Buy discounted parts and peripherals for your system</div>
+                            </div>
+                        </div>
+    
+                        <div class="item is-disabled" data-target="reset">
+                            <i class="fab fa-windows fa-4x"></i>
+                            <div>
+                                <div class="title">PC Recovery</div>
+                                <div class="subtitle">Test, diagnose and restore your PC from recovery mode</div>
+                            </div>
+                        </div>
+    
+                        <div class="item" onclick="aboutApp()">
+                            <i class="fa fa-info-circle fa-4x"></i>
+                            <div>
+                                <div class="title">About</div>
+                                <div class="subtitle">About the AeonLabs app that you're using right now</div>
+                            </div>
+                        </div>
+    
+                    </div>
                 </div>
-
-                <div class="grid-options">
-
-                    <div class="item" data-target="install">
-                        <i class="fa fa-download fa-4x"></i>
-                        <div>
-                            <div class="title">Install Software</div>
-                            <div class="subtitle">One-click installation of popular apps</div>
-                        </div>
-                    </div>
-                    
-                    <div class="item" data-target="sysinfo">
-                        <i class="fa fa-microchip fa-4x"></i>
-                        <div>
-                            <div class="title">System Information</div>
-                            <div class="subtitle">Check out your AeonLabs system specs from here</div>
-                        </div>
-                    </div>
-
-                    <div class="item is-disabled" data-target="service">
-                        <i class="fa fa-tools fa-4x"></i>
-                        <div>
-                            <div class="title">Service & Support</div>
-                            <div class="subtitle">Get help or book a service for your AeonLabs PC</div>
-                        </div>
-                    </div>
-
-                    <div class="item is-disabled" data-target="buy">
-                        <i class="fa fa-plus fa-4x"></i>
-                        <div>
-                            <div class="title">Get Accessories</div>
-                            <div class="subtitle">Buy discounted parts and peripherals for your system</div>
-                        </div>
-                    </div>
-
-                    <div class="item is-disabled" data-target="reset">
-                        <i class="fab fa-windows fa-4x"></i>
-                        <div>
-                            <div class="title">PC Recovery</div>
-                            <div class="subtitle">Test, diagnose and restore your PC from recovery mode</div>
-                        </div>
-                    </div>
-
-                    <div class="item" onclick="aboutApp()">
-                        <i class="fa fa-info-circle fa-4x"></i>
-                        <div>
-                            <div class="title">About</div>
-                            <div class="subtitle">About the AeonLabs app that you're using right now</div>
-                        </div>
-                    </div>
-
-                </div>
-                
             </div>
 
             <div class="content" data-page="install">
-                <h2 style="margin-top: 0px;display: flex;justify-content: space-between;align-items: center;">
-                    <div>Setup <i class="fa fa-chevron-right" style="font-size: 0.7em; vertical-align: middle"></i> Install Apps</div>
-                    <button onclick="ipc.send('runCmd', 'appwiz.cpl')" style="background-color: rgb(255 255 255 / 10%);font-size: 1rem;padding: 2px 20px;vertical-align: middle;border-radius: 5px;" class="button"><i class="fa fa-trash-alt" style="margin-right: 5px;"></i> Uninstall Apps</button>
-                </h2>
-                
-                <div class="options"></div>
-
-                <div id="installSummary">
-                    <div>
-                        <span>Ready to install some apps</span>
-                        <button class="button" onclick="startInstall()">Install Now</button>
+                <div class="container">
+                    <h2 style="margin-top: 0px;display: flex;justify-content: space-between;align-items: center;">
+                        <div>Setup <i class="fa fa-chevron-right" style="font-size: 0.7em; vertical-align: middle"></i> Install Apps</div>
+                        <button onclick="ipc.send('runCmd', 'appwiz.cpl')" style="background-color: rgb(255 255 255 / 10%);font-size: 1rem;padding: 2px 20px;vertical-align: middle;border-radius: 5px;" class="button"><i class="fa fa-trash-alt" style="margin-right: 5px;"></i> Uninstall Apps</button>
+                    </h2>
+                    
+                    <div class="options"></div>
+    
+                    <div id="installSummary">
+                        <div>
+                            <span>Ready to install some apps</span>
+                            <button class="button" onclick="startInstall()">Install Now</button>
+                        </div>
                     </div>
                 </div>
-            
             </div>
 
             <div class="content" data-page="sysinfo">
-                <h2 style="margin-top: 0px;display: flex;justify-content: space-between;align-items: center;">
-                    <div>Setup <i class="fa fa-chevron-right" style="font-size: 0.7em; vertical-align: middle"></i> System Info</div>
-                    <button onclick="loadSysInfo()" style="background-color: rgb(255 255 255 / 10%);font-size: 1rem;padding: 2px 20px;vertical-align: middle;border-radius: 5px;" class="button"><i class="fa fa-redo" style="margin-right: 5px;"></i> Refresh</button>
-                </h2>
-                
-                <div id="sysInfoLoading" style="text-align: center; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%)">
-                    <h1>Please Wait</h1>
-                    <h2 id="sysInfoProgress" style="margin-bottom:0;margin-top:0">Loading System Information</h2>
+                <div class="container">
+                    <h2 style="margin-top: 0px;display: flex;justify-content: space-between;align-items: center;">
+                        <div>Setup <i class="fa fa-chevron-right" style="font-size: 0.7em; vertical-align: middle"></i> System Info</div>
+                        <button onclick="loadSysInfo()" style="background-color: rgb(255 255 255 / 10%);font-size: 1rem;padding: 2px 20px;vertical-align: middle;border-radius: 5px;" class="button"><i class="fa fa-redo" style="margin-right: 5px;"></i> Refresh</button>
+                    </h2>
+                    
+                    <div id="sysInfoLoading" style="text-align: center; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%)">
+                        <h1>Please Wait</h1>
+                        <h2 id="sysInfoProgress" style="margin-bottom:0;margin-top:0">Loading System Information</h2>
+                    </div>
+    
+                    <div id="sysInfoContent" class="is-hidden">
+    
+                        <div class="option is-info">
+                            <div>
+                                <i class="fa fa-tachometer-alt fa-2x"></i>
+                                <span>
+                                    <div class="title">Processor</div>
+                                    <div class="subtitle" data-spec="cpu"></div>
+                                </span>
+                            </div>
+                        </div>
+    
+                        <div class="option is-info">
+                            <div>
+                                <i class="fa fa-microchip fa-2x"></i>
+                                <span>
+                                    <div class="title">Motherboard</div>
+                                    <div class="subtitle" data-spec="mobo"></div>
+                                </span>
+                            </div>
+                        </div>
+    
+                        <div class="option is-info">
+                            <div>
+                                <i class="fa fa-memory fa-2x"></i>
+                                <span>
+                                    <div class="title">Memory</div>
+                                    <div class="subtitle" data-spec="ram"></div>
+                                </span>
+                            </div>
+                        </div>
+    
+                        <div class="option is-info">
+                            <div>
+                                <i class="fa fa-gamepad fa-2x"></i>
+                                <span>
+                                    <div class="title">Graphics</div>
+                                    <div class="subtitle" data-spec="gpu"></div>
+                                </span>
+                            </div>
+                        </div>
+    
+                        <div class="option is-info">
+                            <div>
+                                <i class="fa fa-desktop fa-2x"></i>
+                                <span>
+                                    <div class="title">Displays</div>
+                                    <div class="subtitle" data-spec="display"></div>
+                                </span>
+                            </div>
+                        </div>
+    
+                        <div class="option is-info">
+                            <div>
+                                <i class="fa fa-hdd fa-2x"></i>
+                                <span>
+                                    <div class="title">Disks</div>
+                                    <div class="subtitle" data-spec="disk"></div>
+                                </span>
+                            </div>
+                        </div>
+    
+                        <div class="option is-info">
+                            <div>
+                                <i class="fab fa-windows fa-2x"></i>
+                                <span>
+                                    <div class="title">Windows</div>
+                                    <div class="subtitle" data-spec="os"></div>
+                                </span>
+                            </div>
+                        </div>
+    
+                    </div>
                 </div>
-
-                <div id="sysInfoContent" class="is-hidden">
-
-                    <div class="option is-info">
-                        <div>
-                            <i class="fa fa-tachometer-alt fa-2x"></i>
-                            <span>
-                                <div class="title">Processor</div>
-                                <div class="subtitle" data-spec="cpu"></div>
-                            </span>
-                        </div>
-                    </div>
-
-                    <div class="option is-info">
-                        <div>
-                            <i class="fa fa-microchip fa-2x"></i>
-                            <span>
-                                <div class="title">Motherboard</div>
-                                <div class="subtitle" data-spec="mobo"></div>
-                            </span>
-                        </div>
-                    </div>
-
-                    <div class="option is-info">
-                        <div>
-                            <i class="fa fa-memory fa-2x"></i>
-                            <span>
-                                <div class="title">Memory</div>
-                                <div class="subtitle" data-spec="ram"></div>
-                            </span>
-                        </div>
-                    </div>
-
-                    <div class="option is-info">
-                        <div>
-                            <i class="fa fa-gamepad fa-2x"></i>
-                            <span>
-                                <div class="title">Graphics</div>
-                                <div class="subtitle" data-spec="gpu"></div>
-                            </span>
-                        </div>
-                    </div>
-
-                    <div class="option is-info">
-                        <div>
-                            <i class="fa fa-desktop fa-2x"></i>
-                            <span>
-                                <div class="title">Displays</div>
-                                <div class="subtitle" data-spec="display"></div>
-                            </span>
-                        </div>
-                    </div>
-
-                    <div class="option is-info">
-                        <div>
-                            <i class="fa fa-hdd fa-2x"></i>
-                            <span>
-                                <div class="title">Disks</div>
-                                <div class="subtitle" data-spec="disk"></div>
-                            </span>
-                        </div>
-                    </div>
-
-                    <div class="option is-info">
-                        <div>
-                            <i class="fab fa-windows fa-2x"></i>
-                            <span>
-                                <div class="title">Windows</div>
-                                <div class="subtitle" data-spec="os"></div>
-                            </span>
-                        </div>
-                    </div>
-
-                </div>
-
             </div>
 
             <div class="content" data-page="service">
-                <h2 style="margin-top: 5px">Setup <i class="fa fa-chevron-right" style="font-size: 0.7em; vertical-align: middle"></i> Service</h2>
+                <div class="container">
+                    <h2 style="margin-top: 5px">Setup <i class="fa fa-chevron-right" style="font-size: 0.7em; vertical-align: middle"></i> Service</h2>
 
-                <div class="option is-link">
-                    <i class="fa fa-box-open"></i> View My Order
-                    <sup>Beta</sup>
+                    <div class="option is-link">
+                        <i class="fa fa-box-open"></i> View My Order
+                        <sup>Beta</sup>
+                    </div>
+    
+                    <div class="option is-link">
+                        <i class="fab fa-windows"></i> FAQ and Guides
+                    </div>
+    
+                    <div class="option">
+                        <i class="fab fa-docker"></i> Enable Docker
+                        <label class="switch" style="float:right">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+    
+                    <div class="option is-subpage">
+                        <i class="fa fa-tools"></i> Advanced Docker Settings
+                    </div>
                 </div>
-
-                <div class="option is-link">
-                    <i class="fab fa-windows"></i> FAQ and Guides
-                </div>
-
-                <div class="option">
-                    <i class="fab fa-docker"></i> Enable Docker
-                    <label class="switch" style="float:right">
-                        <input type="checkbox">
-                        <span class="slider"></span>
-                    </label>
-                </div>
-
-                <div class="option is-subpage">
-                    <i class="fa fa-tools"></i> Advanced Docker Settings
-                </div>
-
             </div>
 
             <div class="content" data-page="buy">
-                <h2 style="margin-top: 5px">Setup <i class="fa fa-chevron-right" style="font-size: 0.7em; vertical-align: middle"></i> Get Accessories</h2>
-                
+                <div class="container">
+                    <h2 style="margin-top: 5px">Setup <i class="fa fa-chevron-right" style="font-size: 0.7em; vertical-align: middle"></i> Get Accessories</h2>
+                </div>
             </div>
 
             <div class="content" data-page="reset">
-                <h2 style="margin-top: 5px">Setup <i class="fa fa-chevron-right" style="font-size: 0.7em; vertical-align: middle"></i> Reset PC</h2>
+                <div class="container">
+                    <h2 style="margin-top: 5px">Setup <i class="fa fa-chevron-right" style="font-size: 0.7em; vertical-align: middle"></i> Reset PC</h2>
                 
-                <div class="option is-button" onclick="location.reload(true)">
-                    <i class="fa fa-redo"></i> Reboot to AeonLabs Recovery
+                    <div class="option is-button" onclick="location.reload(true)">
+                        <i class="fa fa-redo"></i> Reboot to AeonLabs Recovery
+                    </div>
                 </div>
-
             </div>
 
         </div>
