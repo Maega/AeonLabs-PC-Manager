@@ -153,6 +153,23 @@
         "hidden": true
     },
     {
+        "id": "1password",
+        "name": "1Password",
+        "subtitle": "A popular password manager that securely generates, stores and auto-fills your passwords",
+        "img": "icons/1password.png",
+        "installCmd": "winget install -e --id AgileBits.1Password",
+        "checkPaths": ["C:\\Program Files\\1Password\\app\\8\\1Password.exe"]
+    },
+    {
+        "id": "lastpass",
+        "name": "LastPass",
+        "subtitle": "Another popular password manager to simplify website logins and more",
+        "img": "icons/lastpass.png",
+        "installCmd": "winget install -e --id LogMeIn.LastPass",
+        "checkPaths": ["C:\\Program Files\\PLACEHOLDER\\PLACEHOLDER.exe"],
+        "hidden": true
+    },
+    {
         "id": "vscode",
         "name": "Visual Studio Code",
         "subtitle": "A popular code editor optimized for building and debugging modern web and cloud applications",
