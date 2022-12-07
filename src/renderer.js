@@ -38,7 +38,8 @@ function loadPage(target) {
     //if (target === 'sysinfo') loadSysInfo();
 
     // If requested page is 'install', call loadInstallOpts to check already-installed or conflicting software
-    if (target === 'install') loadInstallOpts();
+    //if (target === 'install') loadInstallOpts();
+    loadInstallOpts(); // Run on all pages now so that we can prevent a bug with the new summary view UI
 
 }
 
