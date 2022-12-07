@@ -19,7 +19,7 @@ module.exports = {
                     name: 'aeonlabs-pc-manager'
                 },
                 draft: false,
-                prerelease: true
+                prerelease: false
             }
         }
     ],
