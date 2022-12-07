@@ -38,7 +38,7 @@
     {
         "id": "psremoteplay",
         "name": "PS Remote Play",
-        "subtitle": "Stream your PlayStation games from your console to your PC. Yep, it can do that!",
+        "subtitle": "Stream your PlayStation games from your console to your PC",
         "img": "icons/psremoteplay.png",
         "glyph": "fab fa-playstation fa-2x",
         "installCmd": "winget install -e --id PlayStation.PSRemotePlay",
@@ -55,9 +55,9 @@
     {
         "id": "zoom",
         "name": "Zoom",
-        "subtitle": "Team Chat, Phone, Video & More",
+        "subtitle": "A video chat app that's popular with remote school and work",
         "img": "icons/zoom.png",
-        "glyph": "fa fa-microphone-alt fa-2x",
+        "glyph": "fa fa-video fa-lg",
         "installCmd": "winget install -e --id Zoom.Zoom",
         "checkPaths": ["%%userdir%%\\AppData\\Roaming\\Zoom\\bin\\Zoom.exe"]
     },
