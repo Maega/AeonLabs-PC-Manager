@@ -1,6 +1,7 @@
 // Modules to control application life and create native browser window
 const {app, ipcMain} = require('electron');
 const cmd = require('node-cmd');
+const sudo = require('sudo-prompt');
 
 if (require('electron-squirrel-startup')) app.quit();
 require('update-electron-app')();
@@ -90,12 +91,18 @@ ipcMain.on('startInstall', async (event, installList) => {
 
     const softwareDict = require('./software.json');
 
-    const doInstall = (installCmd) => {
+    const doInstall = (installCmd, asAdmin = false) => {
 
         return new Promise((resolve, reject) => {
-            cmd.run(installCmd, function(err, data, stderr) {
+
+            function callback(err, data, stderr) {
                 err || stderr ? reject(stderr) : resolve(data);
-            });
+            }
+
+            asAdmin
+                ? sudo.exec(installCmd, {}, callback)
+                : cmd.run(installCmd, callback);
+
         });
 
     }
@@ -113,7 +120,7 @@ ipcMain.on('startInstall', async (event, installList) => {
         installWindow.loadFile('./src/doinstall.html', {query: {progress: index, total: installList.length, target: JSON.stringify(target)}});
         
         try {
-            const installResult = await doInstall(target.installCmd);
+            const installResult = await doInstall(target.installCmd, !!target.asAdmin);
             console.log(JSON.stringify(installResult));
         } catch (err) {
             console.error(`${target.name} failed to install: ${err}`);
