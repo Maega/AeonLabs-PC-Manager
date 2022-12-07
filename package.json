@@ -24,7 +24,6 @@
   "dependencies": {
     "@electron-forge/publisher-github": "^6.0.4",
     "@electron/remote": "^2.0.1",
-    "dotenv": "^16.0.3",
     "electron-acrylic-window": "^0.5.9",
     "electron-squirrel-startup": "^1.0.0",
     "fs-extra": "^10.0.0",
