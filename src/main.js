@@ -137,6 +137,65 @@ ipcMain.on('startInstall', async (event, installList) => {
 
 });
 
-ipcMain.on('runCmd', async (event, command) => {
-    cmd.run(command);
+// Run command via CMD
+ipcMain.on('runCmd', async (event, command) => cmd.run(command));
+
+// Enable Windows Feature via DISM
+ipcMain.on('enableFeature', async (event, featureName) => {
+
+    const result = await new Promise((resolve, reject) => sudo.exec(`dism /Online /Enable-Feature /NoRestart /FeatureName:"${featureName}" -All`, {}, (err, data, stderr) => {
+        // Error code 3010 is actually successful and just indicates a reboot is required
+        // If any other error code is returned, reject the promise
+        if (err.code !== 3010) reject({
+            success: false,
+            rebootRequired: false,
+            error: err
+        });
+
+        // Return the success state and if a reboot is required for changed to take effect
+        resolve({
+            success: true,
+            rebootRequired: !!(err && err.code === 3010)
+        });
+    }));
+
+    console.log(result);
+    return result;
+
+});
+
+// Disable Windows Feature via DISM
+ipcMain.on('disableFeature', async (event, featureName) => {
+
+    const result = await new Promise((resolve, reject) => sudo.exec(`dism /Online /Disable-Feature /NoRestart /FeatureName:"${featureName}"`, {}, (err, data, stderr) => {
+        // Error code 3010 is actually successful and just indicates a reboot is required
+        // If any other error code is returned, reject the promise
+        if (err.code !== 3010) reject({
+            success: false,
+            rebootRequired: false,
+            error: err
+        });
+
+        // Return the success state and if a reboot is required for changed to take effect
+        resolve({
+            success: true,
+            rebootRequired: !!(err && err.code === 3010)
+        });
+    }));
+
+    console.log(result);
+    return result;
+
+});
+
+// Check if Windows Feature is enabled
+ipcMain.on('checkFeature', async (event, featureName) => {
+    const isEnabled = await new Promise((resolve, reject) => sudo.exec(`dism /Online /Get-FeatureInfo /FeatureName:"${featureName}" | find "State : "`, {}, (err, data, stderr) => {
+        if (err) reject(err);
+        const isEnabled = !!(data.trim().split('State : ')[1] === 'Enabled');
+        resolve(isEnabled);
+    }));
+
+    console.log(isEnabled);
+    return isEnabled;
 });
