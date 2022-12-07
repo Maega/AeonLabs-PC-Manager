@@ -29,6 +29,7 @@
     "fs-extra": "^10.0.0",
     "jquery": "^3.6.0",
     "node-cmd": "^5.0.0",
+    "sudo-prompt": "^9.2.1",
     "sweetalert2": "^11.3.0",
     "systeminformation": "^5.9.16",
     "update-electron-app": "^2.0.1"
