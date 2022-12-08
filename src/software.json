@@ -1,234 +1,207 @@
 [
     {
-        "id": "steam",
+        "id": "Valve.Steam",
         "name": "Steam",
         "subtitle": "The world's most popular PC game launcher and marketplace",
         "img": "icons/steam.png",
         "glyph": "fab fa-steam fa-2x",
-        "installCmd": "winget install -e --id Valve.Steam",
         "checkPaths": ["C:\\Program Files (x86)\\Steam\\steam.exe"]
     },
     {
-        "id": "epic",
+        "id": "EpicGames.EpicGamesLauncher",
         "name": "Epic Games Launcher",
         "subtitle": "A popular PC game launcher and marketplace from Epic Games",
         "img": "icons/epicgameslauncher.png",
-        "installCmd": "winget install -e --id EpicGames.EpicGamesLauncher",
         "checkPaths": [
             "C:\\Program Files (x86)\\Epic Games\\Launcher\\Engine\\Binaries\\Win64\\EpicGamesLauncher.exe",
             "C:\\Program Files (x86)\\Epic Games\\Launcher\\Portal\\Binaries\\Win32\\EpicGamesLauncher.exe"
         ]
     },
     {
-        "id": "origin",
+        "id": "ElectronicArts.EADesktop",
         "name": "EA App",
         "subtitle": "A popular PC game launcher and marketplace from EA Games",
         "img": "icons/origin.png",
-        "installCmd": "winget install -e --id ElectronicArts.EADesktop",
         "checkPaths": ["C:\\Program Files\\Electronic Arts\\EA Desktop\\EA Desktop\\EALauncher.exe"]
     },
     {
-        "id": "gog",
+        "id": "GOG.Galaxy",
         "name": "GOG Galaxy",
         "subtitle": "An awesome DRM-free PC game launcher. Even imports games from <em>other</em> launchers!",
         "img": "icons/gog.png",
-        "installCmd": "winget install -e --id GOG.Galaxy",
         "checkPaths": ["C:\\Program Files (x86)\\GOG Galaxy\\GalaxyClient.exe"]
     },
     {
-        "id": "psremoteplay",
+        "id": "PlayStation.PSRemotePlay",
         "name": "PS Remote Play",
         "subtitle": "Stream your PlayStation games from your console to your PC",
         "img": "icons/psremoteplay.png",
         "glyph": "fab fa-playstation fa-2x",
-        "installCmd": "winget install -e --id PlayStation.PSRemotePlay",
         "checkPaths": ["C:\\Program Files (x86)\\Sony\\PS Remote Play\\RemotePlay.exe"]
     },
     {
-        "id": "discord",
+        "id": "Discord.Discord",
         "name": "Discord",
         "subtitle": "The easiest way to talk over voice, video, and text",
         "img": "icons/discord.png",
-        "installCmd": "winget install -e --id Discord.Discord",
         "checkPaths": ["%%userdir%%\\AppData\\Local\\Discord\\Update.exe"]
     },
     {
-        "id": "zoom",
+        "id": "Zoom.Zoom",
         "name": "Zoom",
         "subtitle": "A video chat app that's popular with remote school and work",
         "img": "icons/zoom.png",
         "glyph": "fa fa-video fa-lg",
-        "installCmd": "winget install -e --id Zoom.Zoom",
         "checkPaths": ["%%userdir%%\\AppData\\Roaming\\Zoom\\bin\\Zoom.exe"]
     },
     {
-        "id": "vlc",
+        "id": "VideoLAN.VLC",
         "name": "VLC Media Player",
         "subtitle": "A popular open source media player that plays almost anything",
         "img": "icons/vlc.png",
-        "installCmd": "winget install -e --id VideoLAN.VLC",
         "checkPaths": ["C:\\Program Files\\VideoLAN\\VLC\\vlc.exe"]
     },
     {
-        "id": "chrome",
+        "id": "Google.Chrome",
         "name": "Google Chrome",
         "subtitle": "It's Chrome, need we say more?",
         "img": "icons/chrome.png",
-        "installCmd": "winget install -e --id Google.Chrome",
         "checkPaths": ["C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"]
     },
     {
-        "id": "firefox",
+        "id": "Mozilla.Firefox",
         "name": "Mozilla Firefox",
         "subtitle": "A popular open-source web browser",
         "img": "icons/firefox.png",
-        "installCmd": "winget install -e --id Mozilla.Firefox",
-        "checkPaths": ["C:\\Program Files\\Mozilla Firefox\\firefox.exe"]
+        "checkPaths": ["C:\\Program Files\\Mozilla Firefox\\firefox.exe"],
+        "asAdmin": true
     },
     {
-        "id": "brave",
+        "id": "BraveSoftware.BraveBrowser",
         "name": "Brave Browser",
         "subtitle": "A popular, privacy focused web browser",
         "img": "icons/brave.png",
-        "installCmd": "winget install -e --id BraveSoftware.BraveBrowser",
         "checkPaths": ["C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe"]
     },
     {
-        "id": "obs",
+        "id": "OBSProject.OBSStudio",
         "name": "OBS Studio",
         "subtitle": "An open-source screencasting and streaming app that's popular with Twitch streamers",
         "img": "icons/obs.png",
-        "installCmd": "winget install -e --id OBSProject.OBSStudio",
         "checkPaths": ["C:\\Program Files\\obs-studio\\bin\\64bit\\obs64.exe"]
     },
     {
-        "id": "rainmeter",
+        "id": "Rainmeter.Rainmeter",
         "name": "Rainmeter",
         "subtitle": "Allows you to display customizable skins and widgets on your desktop",
         "img": "icons/rainmeter.png",
-        "installCmd": "winget install -e --id Rainmeter.Rainmeter",
         "checkPaths": ["C:\\Program Files\\Rainmeter\\Rainmeter.exe"]
     },
     {
-        "id": "spotify",
+        "id": "Spotify.Spotify",
         "name": "Spotify",
         "subtitle": "A digital music service that gives you access to millions of songs",
         "img": "icons/spotify.png",
         "glyph": "fab fa-spotify fa-2x",
-        "installCmd": "winget install -e --id Spotify.Spotify",
         "checkPaths": ["%%userdir%%\\AppData\\Roaming\\Spotify\\Spotify.exe"]
     },
     {
-        "id": "icue",
+        "id": "Corsair.iCUE.4",
         "name": "Corsair iCUE",
         "subtitle": "Extensive PC monitoring and RGB lighting control software from Corsair",
         "img": "icons/icue.png",
-        "installCmd": "winget install -e --id Corsair.iCUE.4",
         "checkPaths": ["C:\\Program Files\\Corsair\\CORSAIR iCUE 4 Software\\iCUE.exe"],
         "asAdmin": true
     },
     {
-        "id": "logitechghub",
+        "id": "Logitech.GHUB",
         "name": "Logitech G HUB",
         "subtitle": "Software to control the lighting, profiles and settings of your Logitech G-series hardware",
         "img": "icons/logitechghub.png",
-        "installCmd": "winget install -e --id Logitech.GHUB",
         "checkPaths": ["C:\\Program Files\\LGHUB\\lghub.exe"]
     },
     {
-        "id": "elgatocc",
+        "id": "Elgato.ControlCenter",
         "name": "Elgato Control Center",
         "subtitle": "Control your Elgato lights with ease",
         "img": "icons/elgato.png",
-        "installCmd": "winget install -e --id Elgato.ControlCenter",
         "checkPaths": ["C:\\Program Files\\Elgato\\ControlCenter\\ControlCenter.exe"]
     },
     {
-        "id": "authy",
+        "id": "Twilio.Authy",
         "name": "Authy Desktop",
         "subtitle": "Get two-factor login codes on your PC with the desktop version of Authy",
         "img": "icons/authy.png",
-        "installCmd": "winget install -e --id Twilio.Authy",
         "checkPaths": ["C:\\Program Files\\PLACEHOLDER\\PLACEHOLDER.exe"],
         "hidden": true
     },
     {
-        "id": "1password",
+        "id": "AgileBits.1Password",
         "name": "1Password",
         "subtitle": "A popular password manager that securely generates, stores and auto-fills your passwords",
         "img": "icons/1password.png",
-        "installCmd": "winget install -e --id AgileBits.1Password",
         "checkPaths": ["C:\\Program Files\\1Password\\app\\8\\1Password.exe"]
     },
     {
-        "id": "lastpass",
+        "id": "LogMeIn.LastPass",
         "name": "LastPass",
         "subtitle": "Another popular password manager to simplify website logins and more",
         "img": "icons/lastpass.png",
-        "installCmd": "winget install -e --id LogMeIn.LastPass",
-        "checkPaths": ["C:\\Program Files\\PLACEHOLDER\\PLACEHOLDER.exe"],
-        "asAdmin": true,
-        "hidden": true
+        "checkPaths": ["C:\\Program Files (x86)\\LastPass\\LastPassBroker.exe"],
+        "asAdmin": true
     },
     {
-        "id": "vscode",
+        "id": "Microsoft.VisualStudioCode",
         "name": "Visual Studio Code",
         "subtitle": "A popular code editor optimized for building and debugging modern web and cloud applications",
         "img": "icons/vscode.png",
-        "installCmd": "winget install -e --id Microsoft.VisualStudioCode",
         "checkPaths": ["%%userdir%%\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe"]
     },
     {
-        "id": "githubdesktop",
+        "id": "GitHub.GitHubDesktop",
         "name": "GitHub Desktop",
         "subtitle": "A popular development tool used for version control",
         "img": "icons/githubdesktop.png",
         "glyph": "fab fa-github fa-2x",
-        "installCmd": "winget install -e --id GitHub.GitHubDesktop",
         "checkPaths": ["%%userdir%%\\AppData\\Local\\GitHubDesktop\\GitHubDesktop.exe"]
     },
     {
-        "id": "postman",
+        "id": "Postman.Postman",
         "name": "Postman",
         "subtitle": "A popular collaboration platform for API development",
         "img": "icons/postman.png",
         "glyph": "fas fa-code-branch fa-2x",
-        "installCmd": "winget install -e --id Postman.Postman",
         "checkPaths": ["%%userdir%%\\AppData\\Local\\Postman\\Postman.exe"]
     },
     {
-        "id": "7zip",
+        "id": "7zip.7zip",
         "name": "7-Zip",
         "subtitle": "A free, open-source file archiver to open and unpack 7z, RAR, ZIP and other files",
         "img": "icons/7zip.png",
         "glyph": "fas fa-file-archive fa-2x",
-        "installCmd": "winget install -e --id 7zip.7zip",
         "checkPaths": ["C:\\Program Files\\7-Zip\\7zFM.exe"]
     },
     {
-        "id": "gdrive",
+        "id": "Google.Drive",
         "name": "Google Drive",
         "subtitle": "A popular cloud storage and synchronization app",
         "img": "icons/gdrive.png",
         "glyph": "fab fa-google-drive fa-2x",
-        "installCmd": "winget install -e --id Google.Drive",
         "checkPaths": ["C:\\Program Files\\Google\\Drive File Stream\\launch.bat"]
     },
     {
-        "id": "onedrive",
+        "id": "Microsoft.OneDrive",
         "name": "Microsoft OneDrive",
         "subtitle": "A popular cloud storage and synchronization app",
         "img": "icons/onedrive.png",
-        "installCmd": "winget install -e --id Microsoft.OneDrive",
         "checkPaths": ["C:\\Program Files\\PLACEHOLDER\\PLACEHOLDER.exe"],
         "hidden": true
     },
     {
-        "id": "treesize",
+        "id": "JAMSoftware.TreeSize.Free",
         "name": "TreeSize Free",
         "subtitle": "An app to figure out where all your precious disk space has gone",
         "img": "icons/treesize.png",
-        "installCmd": "winget install -e --id JAMSoftware.TreeSize.Free",
         "checkPaths": ["C:\\Program Files\\JAM Software\\TreeSize Free\\TreeSizeFree.exe"]
     }
 ]

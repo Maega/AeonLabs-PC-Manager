@@ -91,13 +91,15 @@ ipcMain.on('startInstall', async (event, installList) => {
 
     const softwareDict = require('./software.json');
 
-    const doInstall = (installCmd, asAdmin = false) => {
+    const doInstall = (packageId, asAdmin = false) => {
 
         return new Promise((resolve, reject) => {
 
             function callback(err, data, stderr) {
                 err || stderr ? reject(stderr) : resolve(data);
             }
+
+            const installCmd = `winget install -e --id ${packageId} --accept-package-agreements --accept-source-agreements`;
 
             asAdmin
                 ? sudo.exec(installCmd, {}, callback)
@@ -120,7 +122,7 @@ ipcMain.on('startInstall', async (event, installList) => {
         installWindow.loadFile('./src/doinstall.html', {query: {progress: index, total: installList.length, target: JSON.stringify(target)}});
         
         try {
-            const installResult = await doInstall(target.installCmd, !!target.asAdmin);
+            const installResult = await doInstall(target.id, !!target.asAdmin);
             console.log(JSON.stringify(installResult));
         } catch (err) {
             console.error(`${target.name} failed to install: ${err}`);
