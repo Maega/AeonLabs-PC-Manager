@@ -126,6 +126,11 @@ body.blur,
     color: #78787896;
 }
 
+.option.is-disabled {
+    pointer-events: none;
+    filter: brightness(0.5);
+}
+
 #sidebar > .inner > div > i {
     width: 25px;
 }
@@ -293,17 +298,22 @@ body.blur,
     width: 25px;
 }
 .option.is-check,
-.option.is-info {
+.option.is-info,
+.option.is-switch {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 .option.is-check > div,
-.option.is-info > div {
+.option.is-info > div,
+.option.is-switch > div {
     display: flex;
     align-items: center;
 }
 .option.is-check > div > i,
-.option.is-check > div > img {
+.option.is-check > div > img,
+.option.is-switch > div > i,
+.option.is-switch > div > img {
     width: 32px;
     text-align: center;
     margin-right: 15px;
@@ -315,11 +325,13 @@ body.blur,
     margin-right: 15px;
 }
 .option.is-check > div .title,
-.option.is-info > div .title {
+.option.is-info > div .title,
+.option.is-switch > div .title {
     font-weight: bold;
 }
 .option.is-check > div .subtitle,
-.option.is-info > div .subtitle {
+.option.is-info > div .subtitle,
+.option.is-switch > div .subtitle {
     font-size: 0.9em;
 }
 .option.is-check:after {
