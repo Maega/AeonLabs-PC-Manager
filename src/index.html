@@ -31,10 +31,11 @@
             <div class="inner">
                 <div data-target="welcome" class="selected"><i class="fa fa-home"></i> Welcome</div>
                 <div data-target="install"><i class="fa fa-download"></i> Install Software</div>
+                <div data-target="features"><i class="fab fa-windows"></i> Windows Features</div>
                 <div data-target="sysinfo"><i class="fa fa-microchip"></i> System Information</div>
                 <div data-target="service" class="is-disabled"><i class="fa fa-tools"></i> Service & Support</div>
                 <div data-target="buy" class="is-disabled"><i class="fa fa-plus"></i> Get Accessories</div>
-                <div data-target="reset" class="is-disabled"><i class="fab fa-windows"></i> PC Recovery</div>
+                <div data-target="reset" class="is-disabled"><i class="fa fa-redo"></i> PC Recovery</div>
             </div>
         </div>
 
@@ -57,6 +58,14 @@
                                 <div class="subtitle">One-click installation of popular apps</div>
                             </div>
                         </div>
+
+                        <div class="item" data-target="features">
+                            <i class="fab fa-windows fa-4x"></i>
+                            <div>
+                                <div class="title">Windows Features</div>
+                                <div class="subtitle">Toggle useful Windows features on and off</div>
+                            </div>
+                        </div>
                         
                         <div class="item" data-target="sysinfo">
                             <i class="fa fa-microchip fa-4x"></i>
@@ -74,16 +83,16 @@
                             </div>
                         </div>
     
-                        <div class="item is-disabled" data-target="buy">
+                        <!-- <div class="item is-disabled" data-target="buy">
                             <i class="fa fa-plus fa-4x"></i>
                             <div>
                                 <div class="title">Get Accessories</div>
                                 <div class="subtitle">Buy discounted parts and peripherals for your system</div>
                             </div>
-                        </div>
+                        </div> -->
     
                         <div class="item is-disabled" data-target="reset">
-                            <i class="fab fa-windows fa-4x"></i>
+                            <i class="fa fa-redo fa-4x"></i>
                             <div>
                                 <div class="title">PC Recovery</div>
                                 <div class="subtitle">Test, diagnose and restore your PC from recovery mode</div>
@@ -116,6 +125,64 @@
                             <span>Ready to install some apps</span>
                             <button class="button" onclick="startInstall()">Install Now</button>
                         </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content" data-page="features">
+                <div class="container">
+                    <h2 style="margin-top: 5px">Setup <i class="fa fa-chevron-right" style="font-size: 0.7em; vertical-align: middle"></i> Features</h2>
+                    
+                    <div class="options">
+
+                        <div class="option is-check is-disabled">
+                            <div>
+                                <img src="icons/winsandbox.png">
+                                <span>
+                                    <div class="title">Windows Sandbox</div>
+                                    <div class="subtitle">Test risky or untrustworthy files in a safe, isolated Windows environment</div>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="option is-check is-disabled">
+                            <div>
+                                <i class="fab fa-linux fa-2x"></i>
+                                <span>
+                                    <div class="title">Windows Subsystem for Linux</div>
+                                    <div class="subtitle">Develop and run Linux apps from within Windows</div>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="option is-switch is-disabled">
+                            <div>
+                                <i class="fa fa-bars fa-lg"></i>
+                                <span>
+                                    <div class="title">Use Classic Context Menu Style</div>
+                                    <div class="subtitle">Enable this to revert back to the classic context menus from Windows 10</div>
+                                </span>
+                            </div>
+                            <label class="switch" style="float:right">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+
+                        <div class="option is-switch is-disabled">
+                            <div>
+                                <i class="fa fa-folder-open fa-lg"></i>
+                                <span>
+                                    <div class="title">Use Classic Windows 10 Shell</div>
+                                    <div class="subtitle">Enable this to revert back to the classic taskbar and file explorer from Windows 10</div>
+                                </span>
+                            </div>
+                            <label class="switch" style="float:right">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+
                     </div>
                 </div>
             </div>
