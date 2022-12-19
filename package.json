@@ -1,7 +1,7 @@
 {
   "name": "aeonlabs-pc-manager",
   "productName": "AeonLabs PC Manager",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "AeonLabs PC Companion App",
   "main": "src/main.js",
   "scripts": {
